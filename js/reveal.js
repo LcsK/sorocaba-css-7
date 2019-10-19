@@ -94,7 +94,7 @@
 
 			// Add the current slide number to the URL hash so that reloading the
 			// page/copying the URL will return you to the same slide
-			hash: false,
+			hash: true,
 
 			// Push each slide change to the browser history.  Implies `hash: true`
 			history: false,
@@ -280,7 +280,9 @@
 			hideCursorTime: 5000,
 
 			// Script dependencies to load
-			dependencies: []
+			dependencies: [
+				{ src: 'plugin/highlight/highlight.js', async: true },
+			]
 
 		},
 

@@ -4,14 +4,16 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Sorocaba CSS 7 - Lucas Lopes</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
+		
+		<link rel="stylesheet" href="lib/css/style.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -27,6 +29,235 @@
 			<div class="slides">
 				<section>
 					<h2>Me virando no Front-End: Uma jornada do JS para o Flexbox</h2>
+				</section>
+				<section class="slide-2">
+					<h3>Quem sou eu?</h3>
+					<img src="./img/me.jpg" alt="Lucas and his cat">
+					<ul>
+						<li>Lucas Lopes</li>
+						<li>22 anos</li>
+						<li>Amante da computação desde sempre, tatuiano, músico e gateiro.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>O que eu faço?</h3>
+					<ul>
+						<li>Quase engenheiro da computação</li>
+						<li>Desenvolvedor - IBM</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Me virando no Front-End: Uma jornada do JS para o Flexbox</h2>
+				</section>
+				<section class="slide-4">
+					<h4>Agenda</h4>
+					<ul>
+						<li>Contextualização</li>
+						<li>Componente a ser implementado</li>
+						<li>O que é um componente?</li>
+						<li>Primeira abordagem do desenvolvimento</li>
+						<li>Problemas encontrados</li>
+						<li>Flexbox</li>
+						<li>Seletores CSS</li>
+						<li>Segunda abordagem do desenvolvimento</li>
+						<li>Algumas vantagens no uso do poder do CSS</li>
+						<li>Outras features do CSS</li>
+						<li>Perguntas</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Um pouco de história...</h3>
+				</section>
+				<section data-background-iframe="http://127.0.0.1:6001/#eventos" data-background-interactive>
+				</section>
+				<section>
+					<h3>Estrutura de um componente</h3>
+					<ul>
+						<li>Template</li>
+						<li>Lógica</li>
+						<li>Estilo</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Estrutura de um componente</h3>
+					<ul>
+						<li>Estrutura</li>
+						<li class="fragment" data-fragment-index="0">Comportamento</li>
+						<li class="fragment" data-fragment-index="1">Deixar as coisas bonitinhas</li>
+					</ul>
+				</section>
+				<section class="slide-9">
+					<h3>Hmm.......</h3>
+					<img src="./img/confused.jpg" alt="Confused face">
+					<h3>Será mesmo?</h3>
+				</section>
+				<section class="slide-10">
+					<h3>Componente do Evento</h3>
+					<div class="event-images">
+						<img src="./img/event-bottom.png" alt="Event on bottom">
+						<img src="./img/event-top.png" alt="Event on top">
+					</div>
+				</section>
+				<section class="slide-11">
+					<h3>Template</h3>
+					<img src="./img/old-event-template.png" alt="Old event template">
+				</section>
+				<section class="slide-12">
+					<h3>Lógica</h3>
+					<img src="./img/old-event-logic.png" alt="Old event logic">
+				</section>
+				<section class="slide-13">
+					<h3>Estilo</h3>
+					<img src="./img/old-event-style.png" alt="Old event style">
+				</section>
+				<section class="slide-14-1">
+					<h3>Componente da Timeline</h3>
+					<img src="./img/timeline-component.png" alt="timeline component">
+				</section>
+				<section class="slide-14">
+					<h3>Template</h3>
+					<img src="./img/old-timeline-template.png" alt="Old timeline template">
+				</section>
+				<section class="slide-15">
+					<h3>Lógica</h3>
+					<img src="./img/old-timeline-logic.png" alt="Old timeline logic">
+				</section>
+				<section class="slide-13">
+					<h3>Estilo</h3>
+					<img src="./img/old-timeline-style.png" alt="Old timeline style">
+				</section>
+				<section class="slide-16">
+					<img src="./img/overengineering.jpg" alt="over-engineering is bad!"> 
+				</section>
+				<section>
+					<h3>Sem contar os bugs e inconsistências...</h3>
+				</section>
+				<section class="slide-18">
+					<img src="./img/bug-space-left.png" alt="bug space left">
+				</section>
+				<section class="slide-19">
+					<h3>Flexbox</h3>
+					<img src="./img/cat-typing.gif" alt="cat typing">
+				</section>
+				<section>
+					<h3>Por quê?</h3>
+					<ul>
+						<li>Posicionamento vertical ;)</li>
+						<li>Alinhamento</li>
+						<li>Espaço ocupado pelos componentes</li>
+						<li>Sem mais lágrimas e gambiarras com float, position, etc.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Flexbox</h3>
+					<ul>
+						<li>Flexbox Container</li>
+						<li>Flexbox Item</li>
+					</ul>
+				</section>
+				<section class="slide-22">
+					<img src="./img/flexbox-container-itens.png" alt="flexbox container and itens">
+				</section>
+				<section>
+					<h3>container</h3>
+					<p>display: flex;</p>
+				</section>
+				<section>
+					<h3>flex-direction</h3>
+					<ul>
+						<li>row</li>
+						<li>row-reverse</li>
+						<li>column</li>
+						<li>column-reverse</li>
+					</ul>
+				</section>
+				<section class="slide-25">
+					<img src="./img/flex-directions.png" alt="flexbox directions">
+				</section>
+				<section class="slide-26">
+					<h3>align-self</h3>
+					<img src="./img/align-self.png" alt="flexbox align-self">
+				</section>
+				<section class="slide-27">
+					<h3>Seletores CSS</h3>
+					<img src="./img/bongocat.gif" alt="bongo cat"> 
+				</section>
+				<section class="slide-28">
+					<h3>:first-child</h3>
+					<p>Aplica o estilo se o elemento for o primeiro filho de seu container</p>
+				</section>
+				<section>
+					<h3>:nth-child</h3>
+					<ul>
+						<li>(An+B)</li>
+						<li>odd</li>
+						<li>even</li>
+					</ul>
+				</section>
+				<section>
+					<h3>...e então</h3>
+				</section>
+				<section class="slide-10">
+					<h3>Componente do Evento</h3>
+					<div class="event-images">
+						<img src="./img/event-bottom.png" alt="Event on bottom">
+						<img src="./img/event-top.png" alt="Event on top">
+					</div>
+				</section>
+				<section class="slide-33">
+					<h3>Template</h3>
+					<img src="./img/new-event-template.png" alt="new event template">
+				</section>
+				<section class="slide-34">
+					<h3>Estilo</h3>
+					<img src="./img/new-event-style.png" alt="new event style">
+				</section>
+				<section class="slide-14-1">
+					<h3>Componente da Timeline</h3>
+					<img src="./img/timeline-component.png" alt="timeline component">
+				</section>
+				<section class="slide-36">
+					<h3>Template</h3>
+					<img src="./img/new-timeline-template.png" alt="new timeline template">
+				</section>
+				<section class="slide-37">
+					<h3>Estilo</h3>
+					<img src="./img/new-timeline-style.png" alt="new timeline style">
+				</section>
+				<section>
+					<h3>Vantagens no uso do poder do CSS</h3>
+					<ul>
+						<li>Mais simples</li>
+						<li>Mais limpo</li>
+						<li>Melhor performance</li>
+					</ul>
+				</section>
+				<section>
+					<h3>E tem muito mais...</h3>
+				</section>
+				<section>
+						<ul>
+							<li>Muitas outras features Flexbox</li>
+							<li>CSS Grid</li>
+							<li>Animações</li>
+							<li>Media queries</li>
+							<li>Variáveis CSS</li>
+							<li>Seletores cada vez mais poderosos</li>
+						</ul>
+				</section>
+				<section>
+					<p>CSS com certeza não serve só para "deixar as coisas bonitinhas"</p>
+				</section>
+				<section class="slide-42">
+					<h3>Perguntas?</h3>
+					<img src="./img/nyan.gif" alt="nyan cat">
+					<p class="social-medias">linkedin.com/in/lcsk</p>
+					<p class="social-medias">github.com/lcsk</p>
+					<p class="social-medias">Twitter: @lcsk_f</p>
+				</section>
+				<section class="slide-42">
+					<h4>Imagens Flexbox tiradas de:</h4>
+					https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 				</section>
 			</div>
 		</div>

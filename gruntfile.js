@@ -44,7 +44,7 @@ module.exports = grunt => {
 				sourceMap: false
 			},
 			core: {
-				src: 'css/reveal.scss',
+				src: ['css/reveal.scss', 'css/style.scss'],
 				dest: 'css/reveal.css'
 			},
 			themes: {
@@ -142,7 +142,7 @@ module.exports = grunt => {
 				tasks: 'css-themes'
 			},
 			css: {
-				files: [ 'css/reveal.scss' ],
+				files: [ 'css/reveal.scss', 'css/style.scss' ],
 				tasks: 'css-core'
 			},
 			test: {
